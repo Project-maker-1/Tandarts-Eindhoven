@@ -10,14 +10,18 @@
 <body class="bg-gray-100 min-h-screen flex flex-col">
 
 
-<nav class="bg-blue-800 flex justify-between 
-                items-center px-10 py-5">
-    
-    <div class="text-white font-bold text-xl">
-        TandartsEindhoven
-    </div>
+<nav class="bg-blue-800 flex flex-nowrap justify-between 
+        items-center px-4 md:px-10 py-5">
 
-    <ul class="flex gap-8 list-none">
+<div class="text-white font-bold text-xl whitespace-nowrap">
+    TandartsEindhoven
+</div>
+
+    <button id="menu-knop" class="block sm:hidden text-white text-2xl shrink-0 ml-auto" aria-label="Menu openen">
+        ☰
+    </button>
+
+    <ul id="menu" class="gap-8 list-none hidden sm:flex">
         <li><a href="index.html" class="text-white 
             hover:text-blue-200">Home</a></li>
         <li><a href="diensten.html" class="text-white 
@@ -183,6 +187,8 @@
     </div>
 
 </footer>
+
+<script src="tandarts.js"></script>
 
 </body>
 </html>
