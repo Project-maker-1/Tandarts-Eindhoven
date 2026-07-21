@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    nav {
+        gap: 20px;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    section {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    footer {
+        gap: 28px;
+        flex-wrap: wrap !important;
+    }
+}
+
+@media (max-width: 640px) {
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center !important;
+        padding: 20px !important;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+        gap: 12px !important;
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+
+    nav ul:not(.hidden) {
+        display: flex;
+    }
+
+    nav li {
+        flex: 1 1 90px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 999px;
+        padding: 8px 12px;
+    }
+
+    section {
+        margin: 20px !important;
+    }
+
+    section.bg-white,
+    section.bg-blue-800 {
+        padding: 28px !important;
+        border-radius: 18px !important;
+    }
+
+    section.bg-white.flex,
+    section .bg-white.flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 24px !important;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.15 !important;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    section.flex.justify-center {
+        flex-direction: column;
+        gap: 16px !important;
+    }
+
+    section.flex.justify-center > div {
+        width: 100%;
+    }
+
+    .justify-between {
+        gap: 18px;
+    }
+
+    div.flex.items-center.justify-between {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    a.rounded-full,
+    button.rounded-full {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 28px 20px !important;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    nav li {
+        flex-basis: 100%;
+    }
+
+    section {
+        margin-left: 12px !important;
+        margin-right: 12px !important;
+    }
+
+    section.bg-white,
+    section.bg-blue-800 {
+        padding: 22px !important;
+    }
+
+    h1 {
+        font-size: 1.7rem !important;
+    }
+
+    h2 {
+        font-size: 1.45rem !important;
+    }
+}

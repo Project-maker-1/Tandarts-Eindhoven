@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TandartsEindhoven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+
+<nav class="bg-blue-800 flex flex-nowrap justify-between 
+        items-center px-4 md:px-10 py-5">
+
+<div class="text-white font-bold text-xl whitespace-nowrap">
+    TandartsEindhoven
+</div>
+
+    <button id="menu-knop" class="block sm:hidden text-white text-2xl shrink-0 ml-auto" aria-label="Menu openen">
+        ☰
+    </button>
+
+    <ul id="menu" class="gap-8 list-none hidden sm:flex">
+        <li><a href="index.html" class="text-white 
+            hover:text-blue-200">Home</a></li>
+        <li><a href="diensten.html" class="text-white 
+            hover:text-blue-200">Diensten</a></li>
+        <li><a href="contact.html" class="text-white 
+            hover:text-blue-200">Contact</a></li>
+    </ul>
+
+</nav>
+
+<section class="bg-white mx-10 my-10 
+                rounded-2xl p-16 max-w-2xl 
+                mx-auto w-full">
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">
+        Maak een afspraak
+    </h1>
+    <p class="text-gray-600 mb-8">
+        Vul het formulier in en we nemen 
+        snel contact met je op.
+    </p>
+
+    <form action="https://formspree.io/f/xgogogwd" 
+        method="POST"
+        id="formulier"
+        class="flex flex-col gap-4">
+
+        <input type="text" name="naam" 
+            placeholder="Jouw naam"
+            id="naam"
+            class="w-full p-3 border-2 border-gray-200 
+                    rounded-lg outline-none
+                    focus:border-blue-600">
+
+            <p id="naam-fout" class="text-red-500 hidden">
+            Vul je naam in
+            </p>
+
+        <input type="email" name="email"
+            placeholder="Jouw emailadres"
+            class="w-full p-3 border-2 border-gray-200 
+                    rounded-lg outline-none
+                    focus:border-blue-600">
+
+        <input type="tel" name="telefoon"
+            placeholder="Jouw telefoonnummer"
+            class="w-full p-3 border-2 border-gray-200 
+                    rounded-lg outline-none
+                    focus:border-blue-600">
+
+        <select name="dienst"
+                class="w-full p-3 border-2 border-gray-200 
+                    rounded-lg outline-none
+                    focus:border-blue-600">
+            <option value="">Kies een dienst</option>
+            <option value="reiniging">Tandreiniging - €80</option>
+            <option value="bleken">Tanden Bleken - €150</option>
+            <option value="vulling">Vullingen - €160</option>
+        </select>
+
+        <input type="date" name="datum"
+            class="w-full p-3 border-2 border-gray-200 
+                    rounded-lg outline-none
+                    focus:border-blue-600">
+
+        <textarea name="bericht" 
+                placeholder="Opmerkingen (optioneel)"
+                class="w-full p-3 border-2 border-gray-200 
+                        rounded-lg outline-none h-32
+                        focus:border-blue-600 resize-none">
+        </textarea>
+
+        <button type="submit"
+                class="bg-blue-600 text-white px-6 py-3 
+                    rounded-full font-semibold
+                    hover:bg-blue-700 transition-all 
+                    duration-300 hover:-translate-y-1
+                    cursor-pointer border-none w-fit">
+            Verstuur aanvraag
+        </button>
+
+    </form>
+
+</section>
+
+<footer class="bg-blue-800 flex justify-between
+            px-10 py-8 mt-auto">
+
+    <div class="flex flex-col gap-4 text-white">
+        <h3 class="text-xl font-bold">TandartsEindhoven</h3>
+        <p class="text-gray-300">De beste tandarts in Eindhoven.</p>
+    </div>
+
+    <div class="flex flex-col gap-4 text-white">
+        <h3 class="text-xl font-bold">Openingstijden</h3>
+        <p class="text-gray-300">Maandag - Vrijdag: 09:00 - 20:00</p>
+        <p class="text-gray-300">Zaterdag: 09:00 - 18:00</p>
+        <p class="text-gray-300">Zondag: Gesloten</p>
+    </div>
+    
+    <div class="flex flex-col gap-4 text-white">
+        <h3 class="text-xl font-bold">Contact</h3>
+        <p class="text-gray-300">📍 Stratumseind 14, Eindhoven</p>
+        <p class="text-gray-300">📞 040 - 123 4567</p>
+        <p class="text-gray-300">✉️ info@tandartseindhoven.nl</p>
+    </div>
+
+</footer>
+
+<script src="tandarts.js"></script>
+<script src="validatie.js"></script>
+
+</body>
+</html>
