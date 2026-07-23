@@ -60,17 +60,21 @@
             Vul je naam in
             </p>
 
-        <input type="email" name="email"
+        <input type="email" name="email" id="email"
             placeholder="Jouw emailadres"
             class="w-full p-3 border-2 border-gray-200 
                     rounded-lg outline-none
                     focus:border-blue-600">
 
-        <input type="tel" name="telefoon"
+            <p id="email-fout" class="text-red-500 hidden">Vul je email in</p>
+
+        <input type="tel" name="telefoon" id="telefoon"
             placeholder="Jouw telefoonnummer"
             class="w-full p-3 border-2 border-gray-200 
                     rounded-lg outline-none
                     focus:border-blue-600">
+
+            <p id="telefoon-fout" class="text-red-500 hidden">Vul je telefoonnummer in</p>    
 
         <select name="dienst"
                 class="w-full p-3 border-2 border-gray-200 
